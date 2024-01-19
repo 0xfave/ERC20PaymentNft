@@ -1,6 +1,7 @@
+// SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.8.23;
 
-import "@solady/tokens/ERC20.sol";
+import { ERC20 } from "@solady/tokens/ERC20.sol";
 
 contract Token is ERC20 {
     constructor() ERC20() {

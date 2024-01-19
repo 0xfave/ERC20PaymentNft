@@ -3,7 +3,6 @@ pragma solidity 0.8.23;
 
 import { PRBTest } from "@prb/test/src/PRBTest.sol";
 import { console2 } from "forge-std/src/console2.sol";
-import { StdCheats } from "forge-std/src/StdCheats.sol";
 import { ERC20PaymentNFT } from "../../src/ERC20PaymentNFT.sol";
 import { Token } from "../Utils/Token.sol";
 
@@ -115,7 +114,7 @@ contract ERC20PaymentNFTTest is PRBTest {
         assertGt(balanceDeployerAfter, balanceDeployer);
     }
 
-    // This test is meant to failed 
+    // This test is meant to failed
     // was not able to select the custom error from ownable.sol
     // function test_withdrawTokenFailed() external {
     //     // calculate the price to mint 5 nfts
