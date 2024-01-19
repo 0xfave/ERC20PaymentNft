@@ -1,0 +1,258 @@
+Mutation testing report:
+Number of mutations:    23
+Killed:                 9 / 23
+
+Mutations:
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 67
+    Result: Killed
+    Original line:
+                 if (minted > maxPublicMint) revert MintExceeded();
+
+    Mutated line:
+                 if (minted >= maxPublicMint) revert MintExceeded();
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 68
+    Result: Lived
+    Original line:
+                 if (_totalMinted() + _amount > MAX_SUPPLY) revert SupplyExceeded();
+
+    Mutated line:
+                 if (_totalMinted() + _amount >= MAX_SUPPLY) revert SupplyExceeded();
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 112
+    Result: Lived
+    Original line:
+                 require(contractBalance > 0, "No funds available for withdrawal.");
+
+    Mutated line:
+                 require(contractBalance >= 0, "No funds available for withdrawal.");
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 67
+    Result: Killed
+    Original line:
+                 if (minted > maxPublicMint) revert MintExceeded();
+
+    Mutated line:
+                 if (minted <= maxPublicMint) revert MintExceeded();
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 68
+    Result: Killed
+    Original line:
+                 if (_totalMinted() + _amount > MAX_SUPPLY) revert SupplyExceeded();
+
+    Mutated line:
+                 if (_totalMinted() + _amount <= MAX_SUPPLY) revert SupplyExceeded();
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 104
+    Result: Lived
+    Original line:
+                 return bytes(baseURI).length != 0 ? string(abi.encodePacked(baseURI, LibString.toString(tokenId))) : "";
+
+    Mutated line:
+                 return bytes(baseURI).length == 0 ? string(abi.encodePacked(baseURI, LibString.toString(tokenId))) : "";
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 112
+    Result: Killed
+    Original line:
+                 require(contractBalance > 0, "No funds available for withdrawal.");
+
+    Mutated line:
+                 require(contractBalance <= 0, "No funds available for withdrawal.");
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 66
+    Result: Killed
+    Original line:
+                 uint256 minted = _numberMinted(msg.sender) + _amount;
+
+    Mutated line:
+                 uint256 minted = _numberMinted(msg.sender) - _amount;
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 68
+    Result: Killed
+    Original line:
+                 if (_totalMinted() + _amount > MAX_SUPPLY) revert SupplyExceeded();
+
+    Mutated line:
+                 if (_totalMinted() - _amount > MAX_SUPPLY) revert SupplyExceeded();
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 69
+    Result: Killed
+    Original line:
+                 uint256 mintAmount = mintPrice * _amount;
+
+    Mutated line:
+                 uint256 mintAmount = mintPrice / _amount;
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 65
+    Result: Error
+    Original line:
+                 if (!live) revert MintNotLive();
+
+    Mutated line:
+                 if (!live) revert 
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 67
+    Result: Error
+    Original line:
+                 if (minted > maxPublicMint) revert MintExceeded();
+
+    Mutated line:
+                 if (minted > maxPublicMint) revert 
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 68
+    Result: Error
+    Original line:
+                 if (_totalMinted() + _amount > MAX_SUPPLY) revert SupplyExceeded();
+
+    Mutated line:
+                 if (_totalMinted() + _amount > MAX_SUPPLY) revert 
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 70
+    Result: Killed
+    Original line:
+                 _transferPaymentToken(mintAmount);
+
+    Mutated line:
+                 
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 71
+    Result: Killed
+    Original line:
+                 _mint(msg.sender, _amount);
+
+    Mutated line:
+                 
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 101
+    Result: Error
+    Original line:
+                 if (!_exists(tokenId)) revert TokenDoesNotExist();
+
+    Mutated line:
+                 if (!_exists(tokenId)) revert 
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 50
+    Result: Error
+    Original line:
+                 ERC721A(_name, _ticker)
+
+    Mutated line:
+                 
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 51
+    Result: Error
+    Original line:
+                 Ownable(msg.sender)
+
+    Mutated line:
+                 
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 76
+    Result: Lived
+    Original line:
+             function toggleLive() external onlyOwner {
+
+    Mutated line:
+             function toggleLive() external  {
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 80
+    Result: Lived
+    Original line:
+             function updatePrice(uint256 _mintPrice) external onlyOwner {
+
+    Mutated line:
+             function updatePrice(uint256 _mintPrice) external  {
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 87
+    Result: Lived
+    Original line:
+             function setBaseUri(string calldata _uri) external onlyOwner {
+
+    Mutated line:
+             function setBaseUri(string calldata _uri) external  {
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 94
+    Result: Lived
+    Original line:
+             function setMaxMints(uint64 _maxPublcMint) external onlyOwner {
+
+    Mutated line:
+             function setMaxMints(uint64 _maxPublcMint) external  {
+
+
+Mutation:
+    File: /home/fave/ERC20NFTpurchase/src/ERC20PaymentNFT.sol
+    Line nr: 109
+    Result: Lived
+    Original line:
+             function withdrawTokens() external onlyOwner {
+
+    Mutated line:
+             function withdrawTokens() external  {
+
+

@@ -7,7 +7,9 @@
     "url": "https://github.com/PaulRBerg"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^5.0.1"
+    "@openzeppelin/contracts": "^5.0.1",
+    "erc721a": "^4.2.3",
+    "solady": "^0.0.161"
   },
   "devDependencies": {
     "@prb/test": "^0.6.4",

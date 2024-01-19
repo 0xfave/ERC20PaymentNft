@@ -5,5 +5,14 @@
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml"
   },
-  "solidity.formatter": "forge"
+  "solidity.formatter": "forge",
+  "wake.compiler.solc.remappings": [
+    "@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+    "@prb/test/=node_modules/@prb/test/",
+    "forge-std/=node_modules/forge-std/",
+    "@ERC721A/=node_modules/erc721a/",
+    "erc721a/=node_modules/erc721a/",
+    "@solady/=node_modules/solady/src/",
+    "solady/=node_modules/solady/"
+  ]
 }
